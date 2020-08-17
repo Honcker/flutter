@@ -16,7 +16,7 @@ post_install do |installer|
     if target.respond_to?('headers_build_phase')
       target.headers_build_phase.files.each do |file|
         # Make headers public so they can be imported by the host application.
-        file.settings = { 'ATTRIBUTES' => ['Public'] }
+        # file.settings = { 'ATTRIBUTES' => ['Public'] }
       end
     end
   end
